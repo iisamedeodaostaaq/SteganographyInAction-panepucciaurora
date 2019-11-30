@@ -42,13 +42,13 @@ def create(arrayascii):
     loadPixels()        #dispongo i pixel su un array
     
     while (i<len(arrayascii)+1): #scorre tutto l'array di codici ascii
-        if (i!=-1): 
+        if (i<len(arrayascii)): 
             #se esiste il primo inserisco in r e verifico il successivo             
             r=arrayascii[0]
-            if (i+1!=-1):
+            if (i+1<len(arrayascii)):
                 #se esiste inserisco in g e verifico il successivo
                 g=arrayascii[1]
-                if (i+2!=-1):
+                if (i+2<len(arrayascii)):
                     #se esiste inserisco in b
                     b=arrayascii[2]
                 else:
@@ -89,4 +89,5 @@ def create(arrayascii):
         lunghezza+=lato
     updatePixels()  
     save("code.tiff")
+
 
